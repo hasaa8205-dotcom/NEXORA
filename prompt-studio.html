@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080910">
+    <meta name="description" content="NEXORA-ийн заавар бүтээгчид ойлгомжтой, хэрэгтэй ХО заавар бүтээж, сайжруулаарай.">
+    <title>Заавар бүтээгч — NEXORA AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/multipage.css">
+    <script src="js/navigation.js" defer></script><script src="js/tools.js" defer></script><script src="js/prompts.js" defer></script><script src="js/main.js" defer></script>
+  </head>
+  <body data-page="prompt-studio"><a class="skip-link" href="#main">Үндсэн агуулга руу шилжих</a><div id="site-header"></div>
+    <main id="main">
+      <section class="page-hero section-shell"><div class="hero-glow hero-glow-one"></div><div class="page-hero-content reveal"><div class="page-hero-inner"><p class="eyebrow"><span class="eyebrow-dot"></span> Заавар бүтээгч</p><h1>Эхний хувилбараа<br><span class="gradient-text">илүү тодорхой болго.</span></h1><p class="hero-lede">Санаандаа зорилго, хэв маяг, хэлбэр өг. Сонгосон ХО хэрэгсэлдээ ашиглах, сайжруулж болох заавар бүтээгээрэй.</p></div></div></section>
+      <section class="section section-prompt-studio"><div class="container studio-layout"><div class="studio-intro reveal"><p class="eyebrow">Таны хүсэлтийг оновчтой болгоё</p><h2>Оновчтой оролт.<br><span class="gradient-text">Илүү хэрэгтэй үр дүн.</span></h2><p class="section-intro">Энэ заавар бүтээгч таны мэдээллийг ХО үйлчилгээнд илгээхгүй. Ашиглахаасаа өмнө үр дүнг нягталж, өөртөө тохируулна уу.</p><div class="studio-tip"><span>✦</span><p>Зориулсан хэрэглэгч, нөхцөл байдал, хүссэн үр дүнгээ тодорхой бичээрэй.</p></div></div>
+        <form class="studio-form reveal" id="prompt-studio">
+          <label>Та юу хийх гэж байна вэ?<input name="task" required maxlength="180" placeholder="Жишээ нь: эхлэгчдэд зориулсан амралтын өдрийн сургалт төлөвлөх"></label>
+          <label>Даалгаврын төрөл<select name="taskType"><option>Төлөвлөхөд туслах</option><option>Сэдэв тайлбарлах</option><option>Бичих эсвэл засварлах</option><option>Санаа боловсруулах</option><option>Мэдээлэлд дүн шинжилгээ хийх</option><option>Зургийн тайлбар бүтээх</option></select></label>
+          <label>Хэв маяг<select name="style"><option>Ойлгомжтой, практик</option><option>Дотно, ярианы</option><option>Товч, шууд</option><option>Нарийвчилсан, бүтэцтэй</option><option>Хөгжилтэй, төсөөлөлтэй</option></select></label>
+          <label>Хэл<select name="language"><option selected>Монгол хэлээр</option><option>Англи хэлээр</option><option>Хүсэлтийн хэлээр</option></select></label>
+          <label>Гаралтын хэлбэр<select name="format"><option>Алхамчилсан заавар</option><option>Товч жагсаалт</option><option>Бүтэцтэй тойм</option><option>Гол санаатай хүснэгт</option><option>Товч догол мөрүүд</option></select></label>
+          <label class="studio-wide">Нэмэлт нөхцөл, шаардлага<textarea name="instructions" rows="3" maxlength="400" placeholder="Зориулсан хэрэглэгч, хугацааны хязгаар, зайлсхийх зүйл эсвэл чухал мэдээлэл"></textarea></label>
+          <button class="button button-primary studio-wide magnetic" type="submit">Заавар үүсгэх <span aria-hidden="true">→</span></button>
+          <label class="studio-wide" for="studio-output">Засварлах боломжтой заавар<textarea id="studio-output" rows="7" placeholder="Таны заавар энд гарна. Хуулж авахаасаа өмнө засварлаж болно." aria-label="Үүсгэсэн заавар"></textarea></label>
+          <button class="copy-button studio-copy" id="studio-copy" type="button" disabled>Заавар хуулах</button><p class="studio-status" id="studio-status" role="status" aria-live="polite"></p>
+        </form></div></section>
+      <section class="section section-prompt-library"><div class="container"><div class="section-heading reveal"><div><p class="eyebrow">Багахан урам зориг</p><h2>Хэрэгтэй жишээнээс эхэл.</h2><p class="section-intro">Жишээ зааврыг хуулж, хаалт доторх мэдээллийг өөрийнхөөрөө солиорой.</p></div><span class="prompt-count" id="prompt-count" aria-live="polite"></span></div><div class="directory-controls reveal"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Заавар хайх</span><input id="prompt-search" type="search" placeholder="Жишээ заавар хайх..." autocomplete="off"></label><div class="filter-group" id="prompt-filters" aria-label="Зааврыг ангиллаар шүүх"></div></div><div class="prompt-grid" id="prompt-grid" aria-live="polite"></div><p class="no-results" id="prompt-empty" hidden>Таны хайлтад тохирох заавар олдсонгүй.</p></div></section>
+    </main><div id="site-footer"></div>
+  </body>
+</html>
