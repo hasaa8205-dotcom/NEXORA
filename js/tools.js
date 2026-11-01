@@ -66,7 +66,7 @@ window.NexoraTools = [
     description: "Текстэн тайлбараас зураг бүтээх ХО үйлчилгээ.",
     features: ["Текстээс зураг үүсгэх", "Дүрслэлийн санаа судлах"],
     url: "https://www.midjourney.com/",
-    monogram: "◉",
+    monogram: "◉\uFE0E",
     tone: "slate",
     pricing: "unknown",
     beginnerFriendly: true,

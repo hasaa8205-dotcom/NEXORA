@@ -49,7 +49,7 @@
           <div><span class="footer-label">NEXORA</span><a href="favorites.html">Хадгалсан</a><a href="about.html">Бидний зорилго</a></div>
         </div>
       </div>
-      <div class="container footer-bottom"><span>© <span data-current-year></span> NEXORA AI</span><span>Сониуч хүмүүст зориулав.</span><a href="#main">Дээш буцах ↑</a></div>`;
+      <div class="container footer-bottom"><span>© <span data-current-year></span> NEXORA AI</span><span>Сониуч хүмүүст зориулав.</span><a href="#main">Дээш буцах ↑\uFE0E</a></div>`;
     footer.replaceWith(footerElement);
     footerElement.querySelector("[data-current-year]").textContent = String(new Date().getFullYear());
   }

@@ -139,7 +139,7 @@
       top.append(makeToolLogo(tool), makeElement("span", "tool-category", tool.category));
       const name = makeElement("h3", "", tool.name);
       const description = makeElement("p", "tool-description", tool.description);
-      const link = makeElement("a", "text-link", "Албан ёсны сайтад зочлох ↗");
+      const link = makeElement("a", "text-link", "Албан ёсны сайтад зочлох ↗\uFE0E");
       link.href = tool.url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
@@ -219,7 +219,7 @@
       const details = makeElement("button", "tool-details-button", "Дэлгэрэнгүй үзэх");
       details.type = "button";
       details.addEventListener("click", () => showToolDetails(tool));
-      const external = makeElement("a", "tool-link", "Албан ёсны сайтад зочлох ↗");
+      const external = makeElement("a", "tool-link", "Албан ёсны сайтад зочлох ↗\uFE0E");
       external.href = tool.url;
       external.target = "_blank";
       external.rel = "noopener noreferrer";
@@ -252,7 +252,7 @@
     const list = makeElement("ul", "tool-features");
     tool.features.forEach((feature) => list.append(makeElement("li", "", feature)));
     const note = makeElement("p", "tool-pricing", "Үнийг бие даан баталгаажуулаагүй. Үйлчилгээ үзүүлэгчийн албан ёсны сайтаас шалгана уу.");
-    const link = makeElement("a", "button button-primary", "Албан ёсны сайтад зочлох ↗");
+    const link = makeElement("a", "button button-primary", "Албан ёсны сайтад зочлох ↗\uFE0E");
     link.href = tool.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
