@@ -6,6 +6,16 @@
     if (text !== undefined) element.textContent = text;
     return element;
   };
+  const makeToolLogo = (tool) => {
+    const logo = makeElement("span", `tool-logo tone-${tool.tone}`, tool.logo ? undefined : tool.monogram);
+    if (tool.logo) {
+      const image = makeElement("img", "tool-logo-image");
+      image.src = tool.logo;
+      image.alt = "";
+      logo.append(image);
+    }
+    return logo;
+  };
   const announceStorageIssue = (message) => {
     const notice = document.querySelector("#storage-feedback");
     if (notice) {
@@ -126,7 +136,7 @@
     savedTools.forEach((tool) => {
       const card = makeElement("article", "favorite-card reveal is-revealed");
       const top = makeElement("div", "favorite-card-top");
-      top.append(makeElement("span", `tool-logo tone-${tool.tone}`, tool.monogram), makeElement("span", "tool-category", tool.category));
+      top.append(makeToolLogo(tool), makeElement("span", "tool-category", tool.category));
       const name = makeElement("h3", "", tool.name);
       const description = makeElement("p", "tool-description", tool.description);
       const link = makeElement("a", "text-link", "Албан ёсны сайтад зочлох ↗");
@@ -194,7 +204,7 @@
     visibleTools.forEach((tool) => {
       const card = makeElement("article", "tool-card reveal is-revealed");
       const top = makeElement("div", "tool-card-top");
-      top.append(makeElement("span", `tool-logo tone-${tool.tone}`, tool.monogram), makeElement("span", "tool-category", tool.category));
+      top.append(makeToolLogo(tool), makeElement("span", "tool-category", tool.category));
       const favorite = makeElement("button", `icon-button${favorites.includes(tool.name) ? " is-favorite" : ""}`, favorites.includes(tool.name) ? "★" : "☆");
       favorite.type = "button";
       favorite.setAttribute("aria-label", `${tool.name} ${favorites.includes(tool.name) ? "хадгалснаас хасах" : "хадгалсан зүйлд нэмэх"}`);

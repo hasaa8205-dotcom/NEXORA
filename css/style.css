@@ -16,7 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 86px; }
-body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.65; font-variant-emoji: text; -webkit-font-smoothing: antialiased; }
 body::before { position: fixed; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.028) .65px, transparent .65px); background-size: 5px 5px; content: ""; pointer-events: none; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
