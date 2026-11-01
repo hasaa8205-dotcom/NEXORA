@@ -30,7 +30,7 @@ window.NexoraTools = [
     description: "Санаа судлах, тусламж авах болон Google-ийн дэмждэг үйлчилгээнүүдтэй ажиллах Google-ийн ХО туслах.",
     features: ["Харилцан ярианы тусламж", "Google-ийн үйлчилгээнүүдтэй холбогдох"],
     url: "https://gemini.google.com/",
-    monogram: "✦",
+    monogram: "✦\uFE0E",
     tone: "blue",
     pricing: "unknown",
     beginnerFriendly: true,

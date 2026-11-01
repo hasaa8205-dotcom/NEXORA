@@ -205,7 +205,7 @@
       const card = makeElement("article", "tool-card reveal is-revealed");
       const top = makeElement("div", "tool-card-top");
       top.append(makeToolLogo(tool), makeElement("span", "tool-category", tool.category));
-      const favorite = makeElement("button", `icon-button${favorites.includes(tool.name) ? " is-favorite" : ""}`, favorites.includes(tool.name) ? "★" : "☆");
+      const favorite = makeElement("button", `icon-button${favorites.includes(tool.name) ? " is-favorite" : ""}`, favorites.includes(tool.name) ? "★\uFE0E" : "☆\uFE0E");
       favorite.type = "button";
       favorite.setAttribute("aria-label", `${tool.name} ${favorites.includes(tool.name) ? "хадгалснаас хасах" : "хадгалсан зүйлд нэмэх"}`);
       favorite.setAttribute("aria-pressed", String(favorites.includes(tool.name)));
