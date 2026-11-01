@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080910">
+    <meta name="description" content="Судалгаа, бичвэр, зураг, аудио болон бусад зориулалтын хиймэл оюуны хэрэгслүүдийг хайж, харьцуулаарай.">
+    <title>ХО хэрэгслүүд — NEXORA AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/multipage.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/tools.js" defer></script>
+    <script src="js/prompts.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="explore">
+    <a class="skip-link" href="#main">Үндсэн агуулга руу шилжих</a><div id="site-header"></div>
+    <main id="main">
+      <section class="page-hero section-shell"><div class="hero-glow hero-glow-one"></div><div class="page-hero-content reveal"><div class="page-hero-inner"><p class="eyebrow"><span class="eyebrow-dot"></span> Хиймэл оюуныг судлах</p><h1>Дараагийн санаандаа<br><span class="gradient-text">тохирох хэрэгслээ ол.</span></h1><p class="hero-lede">Өргөжин тэлж буй хиймэл оюуны ертөнцтэй танилцах цэгцтэй эхлэл. Нэр, боломжуудаар хайж, хэрэгслүүдийг харьцуулан, дараа үзэхээр хадгалаарай.</p><div class="page-hero-meta"><span>Сонгон бүрдүүлсэн сан</span><span>·</span><span>Бие даасан эх сурвалж</span></div></div></div></section>
+      <section class="section section-tools page-section">
+        <div class="container">
+          <div class="section-heading reveal"><div><p class="eyebrow">Хэрэгслийн сан</p><h2>Хиймэл оюуны ертөнцтэй танилц.</h2><p class="section-intro">Боломж болон үнэ өөрчлөгдөж болно. Шинэчилсэн мэдээллийг үйлчилгээ үзүүлэгчийн албан ёсны сайтаас шалгана уу.</p></div><span class="directory-count" id="tool-count" aria-live="polite"></span></div>
+          <div class="directory-controls reveal"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">ХО хэрэгсэл хайх</span><input id="tool-search" type="search" placeholder="Хэрэгсэл эсвэл боломж хайх..." autocomplete="off"></label><div class="filter-group" id="tool-filters" aria-label="Хэрэгслийг ангиллаар шүүх"></div></div>
+          <div class="finder-controls reveal"><label>Үнийн мэдээлэл<select id="tool-pricing-filter"><option value="all">Үнэ үл харгалзах</option><option value="Free">Үнэгүй</option><option value="Freemium">Үнэгүй ба төлбөртэй</option><option value="Paid">Төлбөртэй</option><option value="unknown">Тодорхойгүй</option></select></label><label class="checkbox-filter"><input id="tool-beginner-filter" type="checkbox"> Эхлэгчдэд тохиромжтой</label><button class="filter-chip" id="tool-clear-filters" type="button">Шүүлт цэвэрлэх</button></div>
+          <p class="directory-note">Үнийг бие даан баталгаажуулаагүй үед тодорхойгүй гэж тэмдэглэв. Үнэ таамаглан оруулаагүй.</p>
+          <div class="tool-grid directory-grid" id="tool-grid" aria-live="polite" aria-label="Хиймэл оюуны хэрэгслийн сан"></div>
+          <p class="no-results" id="tool-empty" hidden>Таны хайлтад тохирох хэрэгсэл олдсонгүй. Өөр нэр эсвэл ангиллаар хайна уу.</p>
+          <p class="directory-note">NEXORA AI нь бие даасан боловсролын эх сурвалж юм. Бүтээгдэхүүний нэр тухайн эзэмшигчийн өмч бөгөөд хүртээмж, боломж нь өөрчлөгдөж болно.</p>
+          <section class="tool-compare-panel" aria-labelledby="compare-title"><div class="section-heading"><div><p class="eyebrow">Зэрэгцүүлэн харах</p><h3 id="compare-title">Гурван хэрэгсэл хүртэл харьцуул.</h3></div><span class="directory-count" id="compare-count">0 / 3</span></div><div class="compare-selectors" id="compare-selectors"></div><div class="comparison-table-wrap" id="comparison-results" aria-live="polite"></div><p class="form-feedback is-visible" id="compare-feedback" role="status" aria-live="polite"></p></section>
+          <p id="storage-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <dialog class="tool-dialog" id="tool-dialog" aria-labelledby="tool-dialog-title"><form method="dialog"><button class="dialog-close" aria-label="Цонх хаах">×</button></form><div id="tool-dialog-content"></div></dialog>
+    </main><div id="site-footer"></div>
+  </body>
+</html>
